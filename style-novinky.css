@@ -42,7 +42,7 @@ body {
         transition: 0.3s;
         font-size: 14px;
     }
-    @media(max-width: 600px){
+    @media(max-width: 620px){
         .hide{
                display: none;
         }
@@ -117,27 +117,6 @@ body {
 
 /*========================*/
 
-
-
-
-
-/* ===== RESPONSIVE <= 500px ===== */
-@media (max-width: 500px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-toggle {
-        display: block;
-    }
-}
-/*=========================*/
 
 
 
@@ -252,7 +231,7 @@ section {
 
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 550px) {
+@media (max-width: 700px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -267,9 +246,6 @@ section {
         display: block;
     }
 
-    .hide {
-        display: none;
-    }
 }
 
 

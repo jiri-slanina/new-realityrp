@@ -122,8 +122,8 @@ body {
 
 
 
-/* ===== RESPONSIVE <= 500px ===== */
-@media (max-width: 550px) {
+/* ===== RESPONSIVE <= 700px ===== */
+@media (max-width: 700px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -173,7 +173,7 @@ main {
 }
 
 /* ===== RESPONSIVE ===== */
-@media(max-width: 768px) {
+@media(max-width: 700px) {
     .menu-links {
         position: absolute;
         top: 70px;
