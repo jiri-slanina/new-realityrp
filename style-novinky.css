@@ -250,13 +250,6 @@ section {
 
 
 
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #666;
-    border-top: 1px solid #222;
-}
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 550px) {
@@ -278,3 +271,52 @@ footer {
         display: none;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== FOOTER ===== */
+    footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #222;
+        color: #666;
+        margin-top: 80px;
+    }
+
+
+    .link{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .link a{
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #ffffff36;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    .link a:hover{
+        background-color: #00b4ff;
+        color: #000;
+    }
+
+    @media(min-width: 550px){
+        .link a{
+            display: none;
+            
+        }
+    }

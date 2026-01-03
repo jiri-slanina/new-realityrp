@@ -1,0 +1,346 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/loadscreen.jpg);
+        background-size: cover;
+    }
+
+
+
+    /* ===== HEADER ===== */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 70px;
+        background: rgba(15, 15, 15, 0.95);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        z-index: 1000;
+        border-bottom: 1px solid #222;
+    }
+
+    header img{
+        width: 5%;
+    }
+
+
+    header h1 {
+        font-size: 22px;
+        letter-spacing: 1px;
+        color: #00b4ff;
+    }
+
+    .socials a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 14px;
+        border: 1px solid #333;
+        border-radius: 6px;
+        transition: 0.3s;
+        font-size: 14px;
+    }
+    @media(max-width: 600px){
+        .hide{
+               display: none;
+        }
+    }
+
+    .socials a:hover {
+        background: #00b4ff;
+        color: #000;
+    }
+
+    .discord {
+        background: #5865F2;
+        border: none;
+    }
+
+    .discord:hover {
+        background: #4752c4;
+        color: #fff;
+    }
+    /*==========================*/
+
+
+
+
+
+
+
+        /* ===== NAV MENU ===== */
+.main-nav {
+    margin-top: 70px; /* kvůli fixed headeru */
+    background: #111;
+    border-bottom: 1px solid #222;
+    width: 100%;
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+/* hamburger tlačítko */
+.nav-toggle {
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background: #111;
+    font-size: 18px;
+    color: #00b4ff;
+}
+
+/* ===== RESPONSIVE <= 500px ===== */
+@media (max-width: 550px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+
+
+
+    /* ===== MAIN CONTENT ===== */
+    main {
+        padding-top: 100px;
+    }
+
+    section {
+        max-width: 1200px;
+        margin: 100px auto;
+        padding: 0 30px;
+    }
+
+    section .background{
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    section .background h2{
+        font-size: clamp(28px, 2.7vw, 55px);
+    }
+
+    section .background img{
+        width: 35%;
+        margin: 20px;
+        border: 2px solid #00b4ff;
+        border-radius: 555px;
+        margin-top: -25px;
+    }
+
+    section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+        color: #00b4ff;
+    }
+
+    section p {
+        font-size:clamp(16px, 2vw, 26px);
+        /* line-height: 1.6; */
+        color: #ccc;
+    }
+
+
+    /*====BODY VIDEO====*/
+
+        
+
+    /*====================*/
+
+    /* ===== MEDIA GRID ===== */
+    .media-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .one_section{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .btn_job{
+        padding: 5px 10px;
+        border: 2px solid #c0bfbf73;
+        background-color: transparent;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .btn_job:hover{
+        background-color: #00b4ff;
+    }
+
+    .media-box {
+        background: #151515;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #222;
+        transition: 0.3s;
+    }
+
+    .media-box:hover {
+        transform: scale(1.03);
+        border-color: #00b4ff;
+    }
+
+    .media-box img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .media-box iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+    }
+
+    .media-box div {
+        padding: 15px;
+    }
+
+    .media-box p {
+        color: #00b4ff;
+    }
+
+    /*======================*/
+
+
+
+/*===== SERVER INFO BOXY =====*/
+.server-info {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 30px;
+    position: relative; /* nad videem */
+}
+
+.server-info h2 {
+    color: #00b4ff;
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.info-box {
+    background: rgba(21, 21, 21, 0.85); /* lehce průhledné přes video */
+    border-left: 4px solid #00b4ff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    transition: 0.3s;
+    cursor: default;
+}
+
+.info-box:hover {
+    background: rgba(0, 180, 255, 0.15); /* jemný hover efekt přes video */
+}
+
+.info-box h3 {
+    text-align: center;
+    color: #00b4ff;
+    margin-bottom: 10px;
+    border-bottom: 3px solid #00b4ff;
+}
+
+.info-box p, .info-box ul {
+    color: #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.info-box ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.info-box ul li {
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+    /* ===== FOOTER ===== */
+    footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #222;
+        color: #666;
+        margin-top: 80px;
+    }
+
+
+    .link{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .link a{
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #ffffff36;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    .link a:hover{
+        background-color: #00b4ff;
+        color: #000;
+    }
+
+    @media(min-width: 550px){
+        .link a{
+            display: none;
+            
+        }
+    }
