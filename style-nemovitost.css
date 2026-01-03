@@ -1,0 +1,237 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/loadscreen.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(15, 15, 15, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #00b4ff;
+}
+
+.socials a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+@media(max-width: 600px){
+    .hide{
+        display: none;
+    }
+}
+
+.socials a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+.discord {
+    background: #5865F2;
+    border: none;
+}
+
+.discord:hover {
+    background: #4752c4;
+    color: #fff;
+}
+
+/* ===== NAV MENU ===== */
+.main-nav {
+    margin-top: 70px;
+    background: #111;
+    border-bottom: 1px solid #222;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+.nav-toggle {
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background: #111;
+    font-size: 18px;
+    color: #00b4ff;
+    position: relative;
+    z-index: 1100;
+}
+
+.ikon-menu{
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE <= 550px ===== */
+@media (max-width: 550px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+    padding-top: 100px;
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.intro p {
+    font-size: clamp(16px, 1.8vw, 20px);
+    margin-bottom: 25px;
+}
+
+.intro p strong {
+    color: #00b4ff;
+}
+
+/* ===== NEMOVITOSTI BOX ===== */
+.rules-container .rule {
+    position: relative;
+    font-size: clamp(16px, 1.8vw, 22px);
+    background: rgba(0, 180, 255, 0.1);
+    border-left: 4px solid #00b4ff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: default;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.rule-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rule-header h2 {
+    margin: 0;
+}
+
+.show-slider {
+    padding: 6px 12px;
+    border: none;
+    background: #00b4ff;
+    color: #000;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.show-slider:hover {
+    background: #008ecf;
+    color: #fff;
+}
+
+/* ===== SLIDER ===== */
+.slider-container {
+    display: none; /* skryté dokud se neklikne */
+    margin-top: 15px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%; /* šířka kontejneru */
+}
+
+.slider img {
+    width: 100%;          /* obrázek vyplní celý slider-container */
+    flex: 0 0 100%;       /* důležité: každý obrázek zabírá přesně 100% šířky */
+    border-radius: 8px;
+}
+
+/* Tečky */
+.dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.dots span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: #00b4ff;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.dots span.active {
+    opacity: 1;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    border-top: 1px solid #222;
+}
