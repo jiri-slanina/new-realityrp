@@ -6,8 +6,8 @@
     }
 
     body {
-        background: #0f0f0f;
-        color: #fff;
+        background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/loadscreen.jpg);
+        background-size: cover;
     }
 
 
@@ -77,6 +77,7 @@
     margin-top: 70px; /* kvůli fixed headeru */
     background: #111;
     border-bottom: 1px solid #222;
+    width: 100%;
 }
 
 .nav-links {
@@ -110,7 +111,7 @@
 }
 
 /* ===== RESPONSIVE <= 500px ===== */
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .nav-links {
         display: none;
         flex-direction: column;
@@ -139,6 +140,7 @@
         margin: 100px auto;
         padding: 0 30px;
     }
+
 
     section h2 {
         font-size: 28px;

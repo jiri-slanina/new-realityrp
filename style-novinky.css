@@ -6,8 +6,8 @@
 }
 
 body {
-    background: linear-gradient(180deg, #0e0e0e, #151a20);
-    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/loadscreen.jpg);
+    background-size: cover;
 }
 
 /* ===== HEADER ===== */
@@ -177,6 +177,7 @@ section {
     border-left: 5px solid #00b4ff;
     padding: 25px;
     border-radius: 8px;
+    color: #fff;
 }
 
 .vip-box ul {
@@ -188,6 +189,10 @@ section {
     margin-bottom: 10px;
 }
 
+.vip-box h3{
+    color: #00b4ff;
+}
+
 .highlight {
     border-left-color: #7cff00;
 }
@@ -196,6 +201,7 @@ section {
 .info h3 {
     color: #7dd3fc;
     margin-bottom: 10px;
+    text-align: center;
 }
 
 .info p {
@@ -232,6 +238,10 @@ section {
 .future-box h4 {
     color: #00b4ff;
     margin-bottom: 10px;
+}
+
+.future-box p{
+    color: #fff;
 }
 /*==============================*/
 
