@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style-pravidla.css">
+    <title>Pravidla - LS</title>
+</head>
+<body>
+    <header>
+    <h1>LS - Rreality RP</h1>
+
+    <div class="socials">
+        <a class="hide" href="#" target="_blank">Facebook</a>
+        <a class="hide" href="#" target="_blank">YouTube</a>
+        <a href="https://discord.gg/9QKtvy5t" class="discord" target="_blank">Discord</a>
+    </div>
+</header>
+
+<nav class="main-nav">
+    <div class="nav-toggle" id="navToggle">
+        ☰ Menu
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+        <li><a href="index.html"><span class="ikon-menu">🏠</span>Domů</a></li>
+        <li><a href="novinky.html"><span class="ikon-menu">📰</span>Novinky</a></li>
+        <li><a href="#"><span class="ikon-menu">💎</span>V.I.P</a></li>
+
+        <li><a href="#"><span class="ikon-menu">🏠</span>Nemovitosti</a></li>
+        <li><a href="#"><span class="ikon-menu">🎞️</span>Galeir</a></li>
+    </ul>
+</nav>
+
+    <main>
+        <section class="rules-container">
+            <div class="rule">1️⃣ Rešpekt predovšetkým! Správajte sa ku každému tak, ako by ste chceli, aby sa oni správali k vám. Neúcta, obťažovanie alebo zlomyseľné komentáre nie sú tolerované.</div>
+            <div class="rule">2️⃣ Vhodný jazyk! Obmedzte nadávky na minimum a vyhýbajte sa hanlivému jazyku voči iným používateľom, najmä v rámci pomoci alebo oficiálnych kanálov.</div>
+            <div class="rule">3️⃣ Žiadny spam! Neposielajte jednoslovné správy za sebou ani neopakujte emoji hromadne. Vyhnite sa nadmernému pingovaniu používateľov alebo rolí.</div>
+            <div class="rule">4️⃣ Žiadne reklamy! Nepropagujte iné servery ani služby.</div>
+            <div class="rule">5️⃣ Vhodný názov a obrázok! Ak je vaša prezývka, avatar alebo status urážlivý alebo nevhodný, budete požiadaní o jeho zmenu.</div>
+            <div class="rule">6️⃣ Nie rabovaniu serverov! Akákoľvek forma raidov alebo zmienka o raidoch je zakázaná v súlade s Podmienkami služby Discord.</div>
+            <div class="rule">7️⃣ Žiadne hrozby! Hrozby fyzickej ujmy, DDoS, doxing, zneužívanie alebo iné škodlivé konanie sú zakázané.</div>
+            <div class="rule">8️⃣ Riaďte sa pokynmi Discordu! Preštudujte si oficiálne pokyny a vždy ich dodržiavajte.</div>
+            <div class="rule">9️⃣ Hlasové kanály! Nevstupujte do rušného hlasového kanála bez povolenia osôb vo vnútri. Ak vás požiadajú o odchod, rešpektujte to.</div>
+            <div class="rule">🔟 Kritériá pre členov! Moderátori a administrátori môžu podľa vlastného uváženia udeľovať varovania, umlčania, zákazy alebo vylúčenia. Ak sa domnievate, že s vami bolo zaobchádzané nespravodlivo, kontaktujte, prosím, administrátorov súkromne.</div>
+            <div class="rule">1️⃣1️⃣ Pripnuté správy a otázky! Skontrolujte pripnuté správy pre každý kanál, aby ste pochopili ich účel. Ak máte otázky, neváhajte sa opýtať.</div>
+            <div class="rule">1️⃣2️⃣ Prijatie pravidiel! Zotrvaním na serveri súhlasíte s týmito pravidlami a akýmikoľvek zmenami, ktoré k nim môžu nastať.</div>
+            <div class="rule">1️⃣3️⃣ Je vašou zodpovednosťou ich pravidelne kontrolovať.</div>
+        </section>
+    </main>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const menuLinks = document.querySelector('.menu-links');
+
+        hamburger.addEventListener('click', () => {
+            menuLinks.classList.toggle('active');
+            hamburger.classList.toggle('open');
+        });
+    </script>
+
+
+    <footer>
+    © 2026 LS - Rreality RP | CZ / SK FiveM Server
+</footer>
+
+</body>
+</html>
