@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/loadscreen.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(15, 15, 15, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+header h1 {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #00b4ff;
+}
+
+.socials a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+@media(max-width: 600px){
+    .hide{
+        display: none;
+    }
+}
+
+.socials a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+.discord {
+    background: #5865F2;
+    border: none;
+}
+
+.discord:hover {
+    background: #4752c4;
+    color: #fff;
+}
+
+/* ===== NAV MENU ===== */
+.main-nav {
+    margin-top: 70px;
+    background: #111;
+    border-bottom: 1px solid #222;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+.nav-toggle {
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background: #111;
+    font-size: 18px;
+    color: #00b4ff;
+    position: relative;
+    z-index: 1100;
+}
+
+.ikon-menu{
+    flex-wrap: wrap;
+}
+
+/* ===== RESPONSIVE <= 550px ===== */
+@media (max-width: 550px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}

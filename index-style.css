@@ -141,6 +141,24 @@
         padding: 0 30px;
     }
 
+    section .background{
+        display: flex;
+        gap: 20px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    section .background h2{
+        font-size: clamp(28px, 2.7vw, 55px);
+    }
+
+    section .background img{
+        width: 35%;
+        margin: 20px;
+        border: 2px solid #00b4ff;
+        border-radius: 555px;
+        margin-top: -25px;
+    }
 
     section h2 {
         font-size: 28px;
@@ -149,8 +167,8 @@
     }
 
     section p {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size:clamp(16px, 2vw, 26px);
+        /* line-height: 1.6; */
         color: #ccc;
     }
 
