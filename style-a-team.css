@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(img/loadscreen.jpg);
+    background-size: cover;
+}
+
+
+/* ===== HEADER ===== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(15, 15, 15, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
+
+.headerName{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
+
+.headerName img{
+    width: 90px;
+    border-radius: 555px;
+}
+
+@media(max-width: 719px){
+    .headerName img{
+        display: none;
+    }
+}
+
+
+header h1 {
+    font-size: clamp(22px, 2.5vw, 32px);
+    letter-spacing: 1px;
+        color: #00b4ff;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+}
+
+    .socials a {
+        margin-left: 15px;
+        text-decoration: none;
+        color: #fff;
+        padding: 8px 14px;
+        border: 1px solid #333;
+        border-radius: 6px;
+        transition: 0.3s;
+        font-size: 14px;
+    }
+    @media(max-width: 600px){
+        .hide{
+               display: none;
+        }
+    }
+
+    .socials a:hover {
+        background: #00b4ff;
+        color: #000;
+    }
+
+    .discord {
+        background: #5865F2;
+        border: none;
+    }
+
+    .discord:hover {
+        background: #4752c4;
+        color: #fff;
+    }
+    /*==========================*/
+
+
+
+
+
+
+    
+        /* =====HEADER -  NAV MENU ===== */
+.main-nav {
+    margin-top: 70px;
+    background: #111;
+    border-bottom: 1px solid #222;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-links li a {
+    display: block;
+    padding: 15px 25px;
+    text-decoration: none;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+/* hamburger tlačítko */
+.nav-toggle {
+    display: none;
+    padding: 15px;
+    cursor: pointer;
+    text-align: center;
+    background: #111;
+    font-size: 18px;
+    color: #00b4ff;
+
+    position: relative;
+    z-index: 1100; /* ⬅️ MUSÍ BÝT VÍC NEŽ HEADER (1000) */
+}
+
+.ikon-menu{
+    flex-wrap: wrap;
+}
+
+/*========================*/
+
+
+
+
+
+/* ===== RESPONSIVE <= 700px ===== */
+@media (max-width: 700px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+}
+/*============ - KONEC HEADER - =============*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============== - ZAČÁTEK MAIN - =============*/
+
+#admin-team {
+    max-width: 1200px;
+    margin: 120px auto;
+    padding: 0 20px;
+    font-family: Arial, Helvetica, sans-serif; /*--- případně změň ---*/
+    color: #1a1a1a;
+}
+
+/* ---------- ÚVOD ---------- */
+
+.team-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.team-intro h2 {
+    font-size: 2.4rem;
+    margin-bottom: 15px;
+    color: #00b4ff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.team-intro p {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+    line-height: 1.6;
+    color: #fff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ---------- SEKCE ---------- */
+
+.team-section {
+    margin-bottom: 70px;
+}
+
+.team-section h3 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    border-left: 5px solid #fff; /*--- barva serveru ---*/
+    padding-left: 15px;
+    color: #00b4ff;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ---------- GRID ---------- */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+/* Majitel – větší karta */
+.team-grid.owner {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+}
+
+.team-grid.centered {
+    grid-template-columns: 1fr;
+    max-width: 420px;       
+    margin: 0 auto;         
+}
+
+/* ---------- KARTA ---------- */
+
+.team-card {
+    background: #00b3ff80;
+    border-radius: 14px;
+    padding: 25px 20px 30px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* světelný efekt */
+.team-card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0,0,0,0.04), transparent 60%);
+    transition: 0.5s;
+}
+
+.team-card:hover::before {
+    top: 0;
+    left: 0;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* ---------- FOTO ---------- */
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 4px solid #111; /*--- barva serveru ---*/
+}
+
+/* ---------- TEXT ---------- */
+
+.team-card h4 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.team-card .role {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    background: #111; /*--- barva serveru ---*/
+    padding: 6px 14px;
+    border-radius: 20px;
+}
+
+.team-card p {
+    font-size: 0.95rem;
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* ---------- KONTAKT ---------- */
+
+.team-links {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* ---------- ROLE – BAREVNÉ ODLIŠENÍ ---------- */
+
+/* můžeš přidat class="owner-card" apod. */
+.team-card.owner-card .role {
+    background: linear-gradient(135deg, #000, #333); /*--- Majitel ---*/
+}
+
+.team-card.headadmin-card .role {
+    background: linear-gradient(135deg, #111, #444); /*--- Head Admin ---*/
+}
+
+.team-card.headadmin-card .role {
+    background: linear-gradient(135deg, #111, #444); /*--- Admin team---*/
+}
+
+.team-card.discord-card .role {
+    background: linear-gradient(135deg, #1a1a1a, #555); /*--- Discord ---*/
+}
+
+.team-card.support-card .role {
+    background: linear-gradient(135deg, #222, #666); /*--- Podpora ---*/
+}
+
+/* ---------- RESPONSIVE ---------- */
+
+@media (max-width: 600px) {
+    .team-intro h2 {
+        font-size: 2rem;
+    }
+
+    .team-section h3 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/*============= - KONEC MAIN - ==============*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*============= - ZAČÁTEK FOOTER - ===============*/
+
+    footer {
+        text-align: center;
+        padding: 30px;
+        border-top: 1px solid #222;
+        color: #666;
+        margin-top: 80px;
+    }
+
+
+    .link{
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    .link a{
+        text-decoration: none;
+        color: #fff;
+        border: 1px solid #ffffff36;
+        padding: 8px 12px;
+        border-radius: 5px;
+    }
+
+    .link a:hover{
+        background-color: #00b4ff;
+        color: #000;
+    }
+
+    @media(min-width: 550px){
+        .link a{
+            display: none;
+            
+        }
+    }
+
+
+/*============= - KONEC FOOTER - ===============*/

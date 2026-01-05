@@ -11,58 +11,78 @@ body {
 }
 
 /* ===== HEADER ===== */
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 70px;
-        background: rgba(15, 15, 15, 0.95);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 40px;
-        z-index: 1000;
-        border-bottom: 1px solid #222;
-    }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: rgba(15, 15, 15, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    z-index: 1000;
+    border-bottom: 1px solid #222;
+}
 
-    header h1 {
-        font-size: 22px;
-        letter-spacing: 1px;
-        color: #00b4ff;
-    }
+.headerName{
+    display: flex;
+    justify-content: start;
+    gap: 20px;
+}
 
-    .socials a {
-        margin-left: 15px;
-        text-decoration: none;
-        color: #fff;
-        padding: 8px 14px;
-        border: 1px solid #333;
-        border-radius: 6px;
-        transition: 0.3s;
-        font-size: 14px;
+.headerName img{
+    width: 90px;
+    border-radius: 555px;
+}
+@media(max-width: 719px){
+    .headerName img{
+        display: none;
     }
-    @media(max-width: 620px){
-        .hide{
-               display: none;
-        }
-    }
+}
+.headerName h1 {
+    font-size: clamp(22px, 2.5vw, 32px);
+    letter-spacing: 1px;
+    color: #00b4ff;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 20px;
+}
 
-    .socials a:hover {
-        background: #00b4ff;
-        color: #000;
-    }
+    
 
-    .discord {
+.socials a {
+    margin-left: 15px;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 14px;
+    border: 1px solid #333;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+@media(max-width: 620px){
+    .hide{
+        display: none;
+    }
+}
+
+.socials a:hover {
+    background: #00b4ff;
+    color: #000;
+}
+
+.discord {
         background: #5865F2;
         border: none;
     }
 
-    .discord:hover {
+.discord:hover {
         background: #4752c4;
         color: #fff;
-    }
-    /*==========================*/
+}
+/*==========================*/
 
 
 
@@ -70,7 +90,7 @@ body {
 
 
     
-        /* ===== NAV MENU ===== */
+/* ===== NAV MENU ===== */
 .main-nav {
     margin-top: 70px;
     background: #111;
@@ -138,6 +158,8 @@ section {
     font-size: 34px;
     color: #00b4ff;
     margin-bottom: 15px;
+    border-left: 3px solid #fff;
+    padding-left: 20px;
 }
 
 .hero p {
