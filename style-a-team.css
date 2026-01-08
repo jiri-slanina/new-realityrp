@@ -31,6 +31,13 @@ header {
     display: flex;
     justify-content: start;
     gap: 20px;
+    animation: headerName 2s infinite;
+}
+
+@keyframes headerName {
+    0%   { transform: translate(0); }
+    50% { transform: translate(50px);}
+    100% { transform: translate(0px);}
 }
 
 .headerName img{
