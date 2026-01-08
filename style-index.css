@@ -36,6 +36,32 @@ header h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.shake {
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    0%   { transform: translate(0); }
+    /* 20%  { transform: translate(20px);}
+    40% { transform: translate(50px);}
+    60% { transform: translate(40px);}
+    80% { transform: translate(10px);} */
+    50% { transform: translate(50px);}
+    100% { transform: translate(0px);}
+}
+
+@media(max-width: 420px){
+    .shake{
+        animation: shake 2s infinite;
+    }
+    @keyframes shake{
+        0% { transform: translate(0);}
+        50% { transform: translate(20px);}
+        100% { transform: translate(0px);}
+    }
+}
+
+
 .socials a {
     margin-left: 15px;
     text-decoration: none;
@@ -67,15 +93,14 @@ header h1 {
     background: #4752c4;
     color: #fff;
 }
-    /*==========================*/
+/*==========================*/
 
 
 
 
 
 
-
-        /* ===== NAV MENU ===== */
+/*================= NAV MENU =================== */
 .main-nav {
     margin-top: 70px; /* kvůli fixed headeru */
     background: #111;
@@ -116,7 +141,7 @@ header h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-/* ===== RESPONSIVE <= 550px ===== */
+/*================= RESPONSIVE <= 550px =================== */
 @media (max-width: 700px) {
     .nav-links {
         display: none;
@@ -132,11 +157,16 @@ header h1 {
         display: block;
     }
 }
+/*====================== END MAIN ====================*/
 
 
 
 
-/* ===== MAIN CONTENT ===== */
+
+
+
+
+/*=================== MAIN CONTENT =================== */
 main {
     padding-top: 100px;
 }
@@ -190,7 +220,7 @@ section p {
 
 
 
-/* ===== MEDIA GRID ===== */
+/*================= MEDIA GRID ================ */
 .media-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -253,7 +283,7 @@ section p {
 
 
 
-/*===== SERVER INFO BOXY =====*/
+/*================ SERVER INFO BOXY =================*/
 .server-info {
     max-width: 1200px;
     margin: 50px auto;
