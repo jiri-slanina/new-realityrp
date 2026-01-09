@@ -197,6 +197,7 @@ main {
 
 .rule:hover {
     background: rgba(0, 180, 255, 0.25);
+    border-right: 4px solid #fff;
 }
 
 /* ===== RESPONSIVE ===== */

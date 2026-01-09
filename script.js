@@ -33,6 +33,8 @@ document.querySelectorAll('.rule').forEach(rule => {
         });
     };
 
+
+    
     // zobrazení slideru po kliknutí na tlačítko
     btn.addEventListener('click', () => {
         sliderContainer.style.display = sliderContainer.style.display === 'block' ? 'none' : 'block';

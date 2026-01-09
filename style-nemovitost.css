@@ -186,6 +186,14 @@ main {
     font-size: 28px;
 }
 
+.intro h3{
+    font-size: 33px;
+    text-align: center;
+    margin: 20px auto;
+    border-top: 3px solid #008ecf;
+    border-left: 2px solid #008ecf;
+}
+
 /* ===== NEMOVITOSTI BOX ===== */
 .rules-container .rule {
     position: relative;

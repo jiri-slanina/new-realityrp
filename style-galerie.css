@@ -109,11 +109,7 @@ header h1 {
 
 
 
-
-
-
-
-/* ===== NAV MENU ===== */
+/* ================= NAVIGACE MENU ============== */
 .main-nav {
     margin-top: 70px;
     background: #111;
@@ -182,6 +178,12 @@ header h1 {
     border-radius: 20px;
     border: 3px solid #00b4ff;
     margin: 2vw;
+    transition: transform 0.5s;
+}
+
+.iframe-galery iframe:hover{
+    transform: scale(1.03);
+    background-color: #00b4ff;
 }
 
 @media(max-width: 600px){
